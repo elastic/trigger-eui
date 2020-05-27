@@ -91,7 +91,7 @@ const CatchAll: FunctionComponent = () => {
             <EuiSpacer />
 
             <Link href={startLink}>
-              <a>Go to applet's start page</a>
+              <a>Go to applet&apos; start page</a>
             </Link>
           </EuiPageContentBody>
         </EuiPageContent>
