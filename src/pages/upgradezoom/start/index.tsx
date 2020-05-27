@@ -24,12 +24,12 @@ const render = () => (
             upgrade before joining any meetings.
           </p>
           <p>
-            If you don&apos;t update before 31 May, you will be unable to join any
-            Zoom meetings until you upgrade.
+            If you don&apos;t update before 31 May, you will be unable to join
+            any Zoom meetings until you upgrade.
           </p>
           <p>
-            If you can&apos;t upgrade right now that&apos;s ok! We&apos;ll remind you later.
-            Just be sure to upgrade before 31 May.
+            If you can&apos;t upgrade right now that&apos;s ok! We&apos;ll
+            remind you later. Just be sure to upgrade before 31 May.
           </p>
         </EuiText>
       </Fragment>

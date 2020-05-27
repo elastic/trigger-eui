@@ -11,21 +11,21 @@ import {
   EuiIcon,
   EuiCodeBlock,
   EuiCode,
-  EuiText
+  EuiText,
 } from '@elastic/eui';
 
 import Link from '../../components/link';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
-import triggerIcon from 'src/images/logo_menubartrigger.png'
+import triggerIcon from 'src/images/logo_menubartrigger.png';
 
 const appletDesc = `This applet guides the user through a Zoom Upgrade process by:
             
 - Prompting them to upgrade, with details on the consequences of not upgrading
 - Letting them know the upgrade policy is running
 - Letting them know when the upgrade is complete.
-`
+`;
 
 /**
  * A simple page that is rendered for all "app" pages. The filename is
@@ -53,7 +53,6 @@ const CatchAll: FunctionComponent = () => {
         <title>{title}</title>
       </Head>
       <EuiPageBody>
-
         <EuiPageContent>
           <EuiPageContentHeader>
             <EuiPageContentHeaderSection>
@@ -69,24 +68,27 @@ const CatchAll: FunctionComponent = () => {
           <EuiPageContentBody>
             <EuiText>
               <p>
-              This is the root page for a Trigger EUI UX Module named <EuiCode>{finalPathSegment}</EuiCode>. 
-              UX Modules are collections of pages that shepherd a user though a process in Trigger EUI, 
-              such as installing an app or running a script. The first page of an applet is always located
-              at the <EuiCode>start</EuiCode> endpoint, e.g. <EuiCode>/{finalPathSegment}/start/</EuiCode>.
+                This is the root page for a Trigger EUI UX Module named{' '}
+                <EuiCode>{finalPathSegment}</EuiCode>. UX Modules are
+                collections of pages that shepherd a user though a process in
+                Trigger EUI, such as installing an app or running a script. The
+                first page of an applet is always located at the{' '}
+                <EuiCode>start</EuiCode> endpoint, e.g.{' '}
+                <EuiCode>/{finalPathSegment}/start/</EuiCode>.
               </p>
             </EuiText>
 
-            <EuiSpacer size="xl"/>
+            <EuiSpacer size="xl" />
 
             <EuiPageContentHeader>
               <EuiPageContentHeaderSection>
-                <EuiTitle><h3>UX Applet Description</h3></EuiTitle>
+                <EuiTitle>
+                  <h3>UX Applet Description</h3>
+                </EuiTitle>
               </EuiPageContentHeaderSection>
             </EuiPageContentHeader>
 
-            <EuiCodeBlock>
-              {appletDesc}
-            </EuiCodeBlock>
+            <EuiCodeBlock>{appletDesc}</EuiCodeBlock>
 
             <EuiSpacer />
 
