@@ -18,7 +18,7 @@ patchRouter();
 const EuiApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   <>
     <Head>
-      <title>Next.js EUI Starter</title>
+      <title>EUI Trigger Next</title>
     </Head>
     <Chrome>
       <EuiErrorBoundary>

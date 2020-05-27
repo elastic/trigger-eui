@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@elastic/datemath": "^5.0.2",
-    "@elastic/eui": "18.2.1",
+    "@elastic/eui": "^24.0.0",
     "@next/bundle-analyzer": "^9.3.1",
     "glob": "^7.1.6",
     "moment": "^2.24.0",
