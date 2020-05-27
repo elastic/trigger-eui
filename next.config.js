@@ -138,40 +138,40 @@ const nextConfig = {
    * @see https://nextjs.org/docs/routing/introduction
    * @see https://nextjs.org/docs/advanced-features/static-html-export
    */
-  exportPathMap: async function (defaultPathMap) {
-    const dynamicPaths = [
-      '/my-dashboard',
-      '/workpad',
-      '/my-logs',
-      '/my-workpad',
-      '/my-logs',
-      '/apm',
-      '/metrics',
-      '/logs',
-      '/uptime',
-      '/maps',
-      '/siem',
-      '/canvas',
-      '/discover',
-      '/visualize',
-      '/dashboard',
-      '/machine-learning',
-      '/custom-plugin',
-      '/dev-tools',
-      '/stack-monitoring',
-      '/stack-management',
-    ];
+  // exportPathMap: async function (defaultPathMap) {
+  //   const dynamicPaths = [
+  //     '/my-dashboard',
+  //     '/workpad',
+  //     '/my-logs',
+  //     '/my-workpad',
+  //     '/my-logs',
+  //     '/apm',
+  //     '/metrics',
+  //     '/logs',
+  //     '/uptime',
+  //     '/maps',
+  //     '/siem',
+  //     '/canvas',
+  //     '/discover',
+  //     '/visualize',
+  //     '/dashboard',
+  //     '/machine-learning',
+  //     '/custom-plugin',
+  //     '/dev-tools',
+  //     '/stack-monitoring',
+  //     '/stack-management',
+  //   ];
 
-    const pathMap = {
-      ...defaultPathMap,
-    };
+  //   const pathMap = {
+  //     ...defaultPathMap,
+  //   };
 
-    for (const path of dynamicPaths) {
-      pathMap[`/my-app${path}`] = { page: '/my-app/[slug]' };
-    }
+  //   for (const path of dynamicPaths) {
+  //     pathMap[`/my-app${path}`] = { page: '/my-app/[slug]' };
+  //   }
 
-    return pathMap;
-  },
+  //   return pathMap;
+  // },
 };
 
 /**
