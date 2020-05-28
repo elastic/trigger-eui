@@ -22,7 +22,7 @@ const usePathPrefix = process.env.PATH_PREFIX === 'true';
  * Change this to be the name of your repository. GitHub will serve your
  * site under this path.
  */
-const pathPrefix = usePathPrefix ? '/' : '';
+const pathPrefix = usePathPrefix ? '/usr/local/itops/srv/trigger-eui-next/' : '';
 
 const themeConfig = buildThemeConfig();
 
