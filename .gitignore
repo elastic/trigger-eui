@@ -13,6 +13,6 @@ yarn-error.log
 
 # Files in here are copied by the build
 public/themes
-
+out
 node_modules
 .next
