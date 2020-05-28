@@ -16,3 +16,4 @@ public/themes
 out
 node_modules
 .next
+out.zip
