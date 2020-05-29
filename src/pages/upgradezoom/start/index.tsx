@@ -38,12 +38,12 @@ const render = () => (
       <Fragment>
         <EuiFlexGroup gutterSize="s" alignItems="center" direction="column">
           <EuiFlexItem>
-            <EuiButton fill href="http://quit">
+            <EuiButton fill href="http://next">
               Upgrade Now
             </EuiButton>
           </EuiFlexItem>
           <EuiFlexItem>
-            <EuiButtonEmpty color="danger" href="http://next">
+            <EuiButtonEmpty color="danger" href="http://quit">
               Ask Me Later
             </EuiButtonEmpty>
           </EuiFlexItem>
