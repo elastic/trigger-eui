@@ -19,9 +19,9 @@ const EuiApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
     <Head>
       <title>EUI Trigger Next</title>
     </Head>
-      <EuiErrorBoundary>
-        <Component {...pageProps} />
-      </EuiErrorBoundary>
+    <EuiErrorBoundary>
+      <Component {...pageProps} />
+    </EuiErrorBoundary>
   </>
 );
 
