@@ -3,7 +3,6 @@ import Head from 'next/head';
 import React, { FunctionComponent } from 'react';
 import { EuiErrorBoundary } from '@elastic/eui';
 
-import Chrome from '../components/chrome';
 import { patchRouter } from '../lib/routing';
 
 patchRouter();
@@ -20,11 +19,9 @@ const EuiApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
     <Head>
       <title>EUI Trigger Next</title>
     </Head>
-    <Chrome>
       <EuiErrorBoundary>
         <Component {...pageProps} />
       </EuiErrorBoundary>
-    </Chrome>
   </>
 );
 
