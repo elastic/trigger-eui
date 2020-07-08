@@ -5,7 +5,7 @@ import {
   EuiText,
   EuiFlexGroup,
   EuiFlexItem,
-  EuiButtonEmpty
+  EuiButtonEmpty,
 } from '@elastic/eui';
 
 import triggerIcon from 'src/images/icon_ITComms.png';
@@ -18,11 +18,26 @@ const render = () => (
       <Fragment>
         <EuiText>
           <p>
-            Your Mac is only partially enrolled in <a href="https://wiki.elastic.co/display/AD/For+Macs%3A+JAMF+Pro">Workstation Controls.</a> This prevents IT Engineering from fully managing your Mac, which can create problems for you and Elastic's regulatory compliance.
+            Your Mac is only partially enrolled in{' '}
+            <a href="https://wiki.elastic.co/display/AD/For+Macs%3A+JAMF+Pro">
+              Workstation Controls.
+            </a>{' '}
+            This prevents IT Engineering from fully managing your Mac, which can
+            create problems for you and Elastic&apos;s regulatory compliance.
           </p>
-          <p>To fix this, you need to open System Preferences, click <em>Profiles</em>, select <em>Elastic JamfPro MDM</em>, and click <strong>Approve</strong>.</p>
-          <p>Check <a href="https://wiki.elastic.co/display/AD/For+Macs%3A+JAMF+Pro">the Elastic Wiki for more details</a>, or Slack #IT for help.</p>
-          </EuiText>
+          <p>
+            To fix this, you need to open System Preferences, click{' '}
+            <em>Profiles</em>, select <em>Elastic JamfPro MDM</em>, and click{' '}
+            <strong>Approve</strong>.
+          </p>
+          <p>
+            Check{' '}
+            <a href="https://wiki.elastic.co/display/AD/For+Macs%3A+JAMF+Pro">
+              the Elastic Wiki for more details
+            </a>
+            , or Slack #IT for help.
+          </p>
+        </EuiText>
       </Fragment>
     }
     actions={
