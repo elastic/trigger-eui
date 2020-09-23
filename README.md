@@ -8,6 +8,7 @@ Thankfully, [Tania's](https://github.com/taniacomputer) fantastic Trigger family
 
 Trigger-EUI helps bridge this gap by combing the powerful, well documented, and accessible [Elastic UI framework](https://eui.elastic.co/#/) with a [Static Site Generator](https://github.com/vercel/next.js). Mac Admins can quickly build beautiful UIs, display them with Trigger, and bask in the warm glow of a job well done.
 
+![A Visual Demo of an early Trigger EUI interface](trigger-eui-demo.gif)
 
 ## 🚀 Quick start
 
