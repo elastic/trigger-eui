@@ -1,9 +1,4 @@
-<p align="center">
-  <img src="src/images/logo_elastic.png" width="60"  alt="Elastic Logo"/>
-</p>
-
-<h1 align="center">
-  Trigger EUI: Build fantastic UX for [Trigger](https://github.com/taniacomputer/Trigger) and [MBT](https://github.com/taniacomputer/MenuBarTrigger) with [EUI](https://github.com/elastic/eui).
+# Trigger EUI: Build fantastic UX for [Trigger](https://github.com/taniacomputer/Trigger) and [MBT](https://github.com/taniacomputer/MenuBarTrigger) with [EUI](https://github.com/elastic/eui)
 
 ## What's this about?
 
@@ -26,7 +21,7 @@ Trigger-EUI helps bridge this gap by combing the powerful, well documented, and 
     Clone the repository:
 
     ```sh
-    git clone https://github.com/elastic/next-eui-starter.git my-eui-starter
+    git clone https://github.com/elastic/trigger-eui.git
     ```
 
 1.  **Start developing.**
@@ -34,7 +29,7 @@ Trigger-EUI helps bridge this gap by combing the powerful, well documented, and 
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd my-eui-starter/
+    cd trigger-eui/
 
     # Install depdendencies.
     yarn
@@ -50,23 +45,8 @@ Trigger-EUI helps bridge this gap by combing the powerful, well documented, and 
 
     Your site is now running at `http://localhost:3000`!
 
-    Open the `my-eui-starter` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
+    Open the `trigger-eui` directory in your code editor of choice and edit the files under `src/pages/`. Save your changes and the browser will update in real time!
 
-1. **Deploy your site to GitHub pages**
-
-    When you're ready to deploy and share your site, you can use the provided `yarn build-docs` script to do so. The first time you do this, you need to do some preparation:
-
-    1. Modify the `pathPrefix` option in `next.config.js` to reflect the name of your GitHub repo
-    1. Commit the above change
-    2. Create the GitHub pages branch: `git branch gh-pages`
-
-    Then whenever you want to update your site:
-
-    1. Commit any pending changes
-    1. Run `yarn build-docs`
-    1. Publish the `master` and `gh-pages` branches by pushing them to GitHub: `git push origin master gh-pages`
-    1. Edit your repository settings to ensure your repository is configured so that the `gh-pages` branch is used for serving the site. (You only need to do this once, but you that you have to push the branch before you can change this setting)
-    1. Access your site at https://your-username.github.io/repo-name
 
 ---
 
@@ -81,7 +61,6 @@ A quick look at the top-level files and directories you'll see in this project.
     ├── .prettierrc
     ├── LICENSE
     ├── README.md
-    ├── docs/
     ├── next.config.js
     ├── node_modules/
     ├── package.json
@@ -110,9 +89,9 @@ A quick look at the top-level files and directories you'll see in this project.
 
 10. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-11. **`public/`**: Files that will never change can be put here. This starter project automatically puts EUI theme files here during the build
+11. **`public/`**: Files that will never change can be put here. The EUI Theme Files are here!
 
-12. **`src/`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+12. **`src/`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”. `/src/pages` holds most of the magic you're worried about.
 
 13. **`tsconfig.json`**: This file configures the [TypeScript](https://www.typescriptlang.org/) compiler
 
@@ -122,6 +101,20 @@ A quick look at the top-level files and directories you'll see in this project.
 
 Looking for more guidance? Full documentation for Next.js lives [on the website](https://nextjs.org/). You probably want to being by following the [Getting Started Guide](https://nextjs.org/learn/basics/getting-started).
 
-## Other features
+## Building and distributing my UX
 
-* Bundle analysis - run `yarn analyze` and two windows will open in your browser, showing how big your server and client bundles are, and where that data is coming from. You can use this information to work out where you're sending too much data to the client, and speed up your pages.
+Once you have the UX images you want, you'll need to build and distribute them. To help with this, we've included a pre-made build script and [Packages](http://s.sudre.free.fr/Software/Packages/about.html) file. To make your package, you'll need to do a few things:
+
+1. **Download and install Packages!** 
+You won't be able to edit the file or build it otherwise. Grab it from the link above and run the installer. Easy!
+
+2. **Edit the Code Signing Certificate**
+The default package file config is set to sign the generated installer .pkg files using Elastic's Code Signing Certificate. You don't have that, so you'll need to set it to use your own. Open `TriggerEuiResourceBin.pkgproj` and choose **Project > Set Certificate** from the Menu Bar. You can also just chose to remove the certificate entirely, but then your package won't be signed and it many not install on newer versions of macOS.
+
+3. **Edit anything else you'd like**
+By default, your trigger-eui files will be installed to `/usr/local/itops/srv/trigger-eui`. You can change this path if you prefer, this is just what we use at Elastic.
+
+4. **Run the build script with the -v argument**
+To build a package, just run `yarn build-pkg -v VERSION_NUMBER`. Node will build the site, export it, build an installer package, and put everything in the `builds` folder.
+
+The `VERSION_NUMBER` is important! The number you put here will be used to name the package, AND be hidden in a file called `version` wherever your trigger-eui files are ultimately installed (e.g. `/usr/local/itops/srv/trigger-eui/version` if you use the defaults). When you run a script to display a Trigger message, you can programmatically check this file to ensure the trigger-eui files on a given Mac are at the minimum version to have the content you're trying to display.
