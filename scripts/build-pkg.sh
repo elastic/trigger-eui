@@ -58,7 +58,7 @@ set -ex
 # Build the site
 yarn build
 # Now export the static version to the build dir
-next export -o build
+yarn next export -o build
 # Add a version file
 echo "$VERSION" > build/version
 
