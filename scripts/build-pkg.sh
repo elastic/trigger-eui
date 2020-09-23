@@ -48,12 +48,15 @@ fi
 
 ## Do the thing
 
-printf "Building Trigger-EUI Resource Bin Package (Package Version: $VERSION)"
+printf "Building Trigger-EUI Resource Bin Package (Package Version: $VERSION)\n"
 echo "------------------------------------------------------------------------------"
 printf "\n"
 
 # Fail early, talk often. https://www.peterbe.com/plog/set-ex
 set -ex
+
+# Tell Next to use a custom path prefix so things load correctly - see next.config.js
+export PATH_PREFIX=true
 
 # Build the site
 yarn build
