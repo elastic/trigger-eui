@@ -21,7 +21,7 @@ fi
 
 # Process build arguments. You can set a default Version here, if you'd like.
 VERSION=""
-while getopts “:vh” opt; do
+while getopts “v:h” opt; do
   case $opt in
     v)
         VERSION=${OPTARG}
