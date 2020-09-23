@@ -101,9 +101,9 @@ A quick look at the top-level files and directories you'll see in this project.
 
 Looking for more guidance? Full documentation for Next.js lives [on the website](https://nextjs.org/). You probably want to being by following the [Getting Started Guide](https://nextjs.org/learn/basics/getting-started).
 
-## Building and distributing my UX
+## 📦 Building and distributing your UX
 
-Once you have the UX images you want, you'll need to build and distribute them. To help with this, we've included a pre-made build script and [Packages](http://s.sudre.free.fr/Software/Packages/about.html) file. To make your package, you'll need to do a few things:
+Once you have the UX you want, you'll need to build and distribute them. To help with this, we've included a pre-made build script and [Packages](http://s.sudre.free.fr/Software/Packages/about.html) file. To make your package, you'll need to do a few things:
 
 1. **Download and install Packages!** 
 You won't be able to edit the file or build it otherwise. Grab it from the link above and run the installer. Easy!
@@ -116,5 +116,4 @@ By default, your trigger-eui files will be installed to `/usr/local/itops/srv/tr
 
 4. **Run the build script with the -v argument**
 To build a package, just run `yarn build-pkg -v VERSION_NUMBER`. Node will build the site, export it, build an installer package, and put everything in the `builds` folder.
-
 The `VERSION_NUMBER` is important! The number you put here will be used to name the package, AND be hidden in a file called `version` wherever your trigger-eui files are ultimately installed (e.g. `/usr/local/itops/srv/trigger-eui/version` if you use the defaults). When you run a script to display a Trigger message, you can programmatically check this file to ensure the trigger-eui files on a given Mac are at the minimum version to have the content you're trying to display.
