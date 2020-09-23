@@ -3,17 +3,16 @@
 </p>
 
 <h1 align="center">
-  Elastic's Next.js EUI Starter
-</h1>
+  Trigger EUI: Build fantastic UX for [Trigger](https://github.com/taniacomputer/Trigger) and [MBT](https://github.com/taniacomputer/MenuBarTrigger) with [EUI](https://github.com/elastic/eui).
 
-Jump right in to building Kibana prototypes with [EUI](https://github.com/elastic/eui).
+## What's this about?
 
-## 🚀 Super-quick start using CodeSandbox
+Standard Mac IT frameworks often leave much to be desired when you need to interact with end users. Tools like [Notifier](https://github.com/dataJAR/Notifier) provide a way to do push notifictions, but rich notifications or interactive UX tends to require unsavory mixes of Apple Script or depricated tools like CocoaDialog.
 
-1. Go to
-   [https://codesandbox.io/s/github/elastic/next-eui-starter](https://codesandbox.io/s/github/elastic/next-eui-starter)
-   and start editing. CodeSandbox will fork the sandbox when you make
-   changes!
+Thankfully, [Tania's](https://github.com/taniacomputer) fantastic Trigger family of applications provides a simple and flexible way to interact with end users via HTML and the Shell. But while Trigger apps make it easy to _display_ a UX, you have to build one first, and that can be a daunting challenge.
+
+Trigger-EUI helps bridge this gap by combing the powerful, well documented, and accessible [Elastic UI framework](https://eui.elastic.co/#/) with a [Static Site Generator](https://github.com/vercel/next.js). Mac Admins can quickly build beautiful UIs, display them with Trigger, and bask in the warm glow of a job well done.
+
 
 ## 🚀 Quick start
 
