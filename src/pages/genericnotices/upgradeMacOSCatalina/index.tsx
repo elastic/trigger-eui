@@ -90,8 +90,6 @@ export default () => {
     );
   }
 
-// eslint is really dumb and demands this
-default.displayName = 'default';
   ////////////////////////////////
   // Main Dialog Content Goes Here
   ////////////////////////////////
