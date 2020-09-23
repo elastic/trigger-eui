@@ -26,7 +26,7 @@ const render = () => (
     body={
       <Fragment>
         <EuiSpacer size="m" />
-        <EuiProgress size="s" color="primary" fullsize="true" />
+        <EuiProgress size="s" color="primary" />
       </Fragment>
     }
     actions={
